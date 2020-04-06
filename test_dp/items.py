@@ -5,10 +5,11 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy.item import Field, Item
 
+from scrapy.item import Item, Field
 
-class TestDpItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class SitegraphItem(Item):
+     url=Field()
+     linkedurls=Field()
+     http_status = Field()
